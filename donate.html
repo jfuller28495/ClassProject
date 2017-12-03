@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+	<title> Donate to Pets To Go </title>
+	<!--
+Final Project
+Your Name: Jeannetta Fuller
+Today's Date: 10/17/17
+-->
+
+<link rel = "stylesheet" href = "./ptg.css" type = "text/css" />
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> 
+	
+</head>	
+<body>
+
+<div id="navcontainer">
+	<ul id="navlist">
+		<a href="/wdv101/FinalProject/index.html">----Home---- </a>
+		<a href="/wdv101/FinalProject/about.html">----About Us---- </a>
+		<a href="/wdv101/FinalProject/donate.html">----Donate & Volunteer---- </a>
+		<a href="/wdv101/FinalProject/adoptables.html">----Adoptables---- </a>
+		<a href="/wdv101/FinalProject/alumni.html">----PTG Alumni---- </a>
+
+
+	</ul>
+</div>
+	
+<header>
+<h1> Pets To Go - Donate or Volunteer </h1>
+</header>	
+
+<h1> Welcome to Pets to Go's Donation Page! </h1>
+ <p> Our organization got it's start in 2009 after our founders recognized a serious need for a shelter that rescues homeless animals. <em> We pride ourselves in having rescued over 18,000 homeless cats and dogs</em> since our founding. To this day, we take in an average of five animals per day and work hard to place them with the best home possible. </p>
+ 
+ <h1> How to Donate or Volunteer </h1>
+ <p> We make getting involved at PTG an easy thing to do! Below are links and forms that will offer you several opportunities to get involved and make a difference in an animal's life. </p> 
+ 
+ <h2> Form to fill out for more information about PTG's volunteering programs </h2>
+ 
+<form id = "survey" name = "survey" method = "post" action = "./files/php_emailer.php">
+
+ <fieldset class = "labelfloatleft"><legend>Personal Information</legend>
+
+<!-- text boxes are below -->
+		<label for = "firstname"> First Name </label>
+		<input type = "text" name = "firstname" id = "firstname" size = "15"/>
+		
+		<label for = "lastname"> Last Name </label>
+		<input type = "text" name = "lastname" id = "lastname" size = "20"  />
+		
+		<label for = "phone"> Phone </label>
+		<input type = "text" name = "phone" id = "phone" size = "12" maxlength = "12"/>
+		
+		<label for = "address1"> Address Line 1</label>
+		<input type = "text" name = "address1" id = "address1" size = "20" />
+		
+		<label for = "address2"> Address Line 2</label>
+		<input type = "text" name = "address2" id = "address2" size = "20" />
+		
+		<label for = "city"> City </label>
+		<input type = "text" name = "city" id = "city" size = "20" />
+		
+		<label for = "state"> State </label>
+		<input type = "text" name = "state" id = "state" size = "2" />
+		
+		<label for = "zip"> Zip </label>
+		<input type = "text" name = "zip" id = "zip" size = "5"/>
+		
+		<label for = "emailfrom"> Email </label>
+		<input type = "emailfrom" name = "emailfrom" id = "emailfrom" size = "40" maxlength = "40"/>
+
+
+<!-- second checkbox is below -->
+<label for = "offers" > I would like to receive monthly newsletters from PTG. </label>
+<input type = "checkbox" name = "offers" id = "offers" checked = "checked" />
+
+
+<!-- input buttons are below -->
+
+</fieldset>
+	<input type = "submit" value = "Send Information" class = "button" action = "./files/php_emailer.php" />
+	<input type = "reset" value = "Reset" class = "button" />
+</form>
+
+<div class = "links">
+
+<h2> Links to resources about animal health and welfare </h2>
+<a href = "http://www.apl-shelter.org/DotNetNuke/"> Animal Protective League of Illinois </a>
+<br />
+<a href = "https://www.peta.org/"> PETA </a>
+<br />
+<a href = "http://www.neavs.org/research/laws"> NEAVS - Laws Regarding Animal Use in Research </a>
+<br />
+<a href = "http://www.petmd.com/"> PetMD </a>
+<br />
+</div>
+
+<br />
+<br />
+
+
+
+ 
+ 
+ 
+ <h2> Frequently Asked Questions about Donating </h2>
+ <div id = "faqs">
+	<ul>
+		<li class = "question">Question: What do my donations go to?</li>
+		<li class = "answer"> Answer: Your donations fund transportation, food, overhead costs, and the salaries of our staff members. We are a 501(c)3 organization, meaning that our organization does not make a profit. That being said, we offer competitive salaries to our staff members to ensure that we are offering the highest quality care to our animals and yours, meaning our salary costs are higher than other comparable organizations. </li>
+		<br />
+		<li class = "question"> Question: What types of things do volunteers do? </li>
+		<li class = "answer"> Answer: First, our volunteers undergo a five-hour training course on animal welfare and how to spot and treat abused animals that we rescue. Next, our volunteers undergo a week's training to learn and better understand the needs of our animals and our organization. Finally, our volunteers pass a certification test for animal resuscitation and first aid, that ensures they are well-equipped to handle any emergency that comes their way. We sponsor all of the trainings through free-will donations and sponsorships. Because of the level of training and specialization we offer our volunteers, many of them have transitioned from volunteers to paid staff members, which directly benefits our organization and improves the quality of care we can offer.</li>
+		<br />
+		<li class = "question"> Question: How old do I need to be to volunteer? </li>
+		<li class = "answer"> Answer: Volunteers need to be at least 16 years of age, to meet national employment standards. Potential volunteers who are under the age of 16 can still attend the trainings and workshops if accompanied by a parent. All volunteers under the age of 18 will need to have their parents or legal guardians sign a waiver indicating they understand the risks involved with working with rescue animals and will not hold PTG accountable for any accidents or injuries.  </li>
+		<br />
+		<li class = "question"> Question: Does working as a volunteer for PTG count for volunteering hours at my school? </li>
+		<li class = "answer"> Answer: Most schools in the area, as well as community service programs, will accept volunteering hours worked at PTG as credit toward volunteering requirements or awards. If you have questions about volunteering at PTG, please send us an email at <em> contact@petstogo.com </em> </p>
+
+	</ul>
+</div>
+<br />
+<br />
+
+<br />
+<br />
+
+<footer>
+	<h4> Pets To Go Animal Shelter &reg; </h4>
+	<ul>3183 S Veterans Pkwy</ul>
+	<ul> Springfield, Illinois 62704 </ul>
+	<ul> Phone: (217) 698-3091 </ul>
+	<ul> Email: <a href = "mailto: contact@petstogo.com"> contact@petstogo.com </a> </ul>
+	<ul> <a href = "#navlist" > Top of Page </a> </ul>
+
+</footer>
+</body>
+</html>

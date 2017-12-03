@@ -1,0 +1,214 @@
+
+
+		header {
+			color: #B54C1D;
+			font-size: 2.5em;
+			font-family: 'Gloria Hallelujah', cursive;
+			
+			}
+		header, footer {
+			background-color: #B5651D;	
+			font-family: 'Gloria Hallelujah', cursive;
+
+		}
+		div {
+			background-color: #B5651D:
+			}
+		
+		#navcontainer {
+			background-color: #B5651D;
+			margin: 0;
+			padding: 0;
+			background-repeat: repeat-y repeat-x;
+			text-align: center;
+			color: white;
+			font-family: Arial, sans-serif;
+			font-size: 1.5em;
+			
+			}
+			
+		#navlist { 
+			background-color: #B57E1D; 
+			display: inline;
+			background-repeat: repeat-y repeat-x;
+			color: white;
+			font-family: Arial, sans-serif;
+			font-size: 1.25em;
+			text-align: center;
+			
+			
+			}
+			
+		#products {
+			text-align: center;
+			font-size: 1.75em;
+			color: #B54C1D;
+			font-family: Arial, sans-serif;
+			
+			}
+			
+		#links {
+			text-align: center;
+			float: center-left;
+			color: #B54C1D;
+			list-style-type: none;
+			
+		}
+		
+		img {
+			float: center;
+			border-radius: 15px;
+			
+		}
+		a {
+			font-family: 'Gloria Hallelujah', cursive;
+			
+		}
+		
+		a:link {
+			color: gold;
+			text-decoration: none
+			
+			}
+
+		a:hover {
+			color: white;
+			text-decoration: underline;
+
+			}
+		a:clicked {
+			color: red;
+
+			}
+		body {
+			color: black;
+			font-size: 1em;
+			padding: 10px 20px 10px 20px;
+			background-color:  #FFB775;
+			
+			}
+		h1, h2, h3, h4, h5 {
+			
+			font-family: 'Gloria Hallelujah', cursive;
+			
+			}
+		h1 {
+			color: #683200;
+			font-size: 2em;
+			text-align: center;
+			
+			
+			}
+		h2 {
+			color: #B54C1D;
+			font-size: 1.75em;
+			text-align: center;
+
+			}
+		h3 {
+			color: #B54C1D;
+			font-size: 1.5em;
+			text-align: center;
+
+			}
+
+		h4 {
+			color: #683200;
+			font-size: 1.25em;
+			text-align: center;
+			}
+		p {
+			color: black;
+			font-size: 1.25em;
+			float: center;
+			padding: 10px 20px 10px 20px;
+			text-align: center;
+			position: center;
+			text-indent: 10px;
+			}
+		ul {
+			
+
+		 
+			}
+			
+		form {
+			margin-bottom: 1em;
+			padding: 0.5em;
+			background-color: #DB8C44;
+			font-size: 16px;
+			float: center;
+			}
+		
+		.labelfloatleft {
+			margin: 0;
+			padding: 0.5em;
+			clear: both;
+			}
+		label {
+			width: 100px;
+			margin: 0 15px 0 4px;
+			color: black;
+			float: left;
+			text-align: right;
+			}
+		legend {
+			padding: 0 10px 0 10px;
+			color: #354660;
+			text-transform: bold;
+			}
+		fieldset {
+			width: 80%;
+			margin: 1em;
+			border: solid 5px #354660;
+			padding: 0.5em 0.5em 0.5em 0.5em;
+			background-color: #DB8C44;
+			float: center;
+			}
+		input {
+			display: block;
+			}
+		input.button {
+			margin-top: 5em;
+			border: solid thin black;
+			color: black;
+			background-color: yellow;
+			button-text: bold;
+			display: inline;
+			}
+		li a {
+			float: left;
+			color: black;
+			text-align: left;
+			text-decoration: underline;
+			font-size: 2em;
+
+			
+			}
+		li.tree {
+			list-style-type: cjk-ideographic;
+		}
+			
+		.active {
+			background-color: #FFB775;
+		}
+		em {
+			color: #B57E1D;
+			text-decoration: italic;
+			font-family: 'Gloria Hallelujah', cursive;
+			}
+		strong {
+			color: #B54C1D;
+			text-decoration: bold;
+			font-family: 'Gloria Hallelujah', cursive;
+			
+			}
+		
+		footer {
+			font-size: 1em;
+			text-align: center;
+			
+			}
+		.links {
+			text-align: center;
+		}
