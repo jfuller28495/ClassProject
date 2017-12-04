@@ -1,119 +1,53 @@
 <?php
-if(isset($_POST['submit'])) {
- 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "jeannetta.fuller@hotmail.com";
-    $email_subject = "'$firstname' has contacted PTG!";
- 
-    function died($error) {
-        // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        die();
-    }
- 
- 
-    // validation expected data exists
-    if(!isset($_POST['firstname']) ||
-        !isset($_POST['lastname']) ||
-        !isset($_POST['emailfrom']) ||
-        !isset($_POST['phone']) ||
-        !isset($_POST['address1']))
-        !isset($_POST['address2']) ||
-        !isset($_POST['city']) ||
-        !isset($_POST['state']) ||
-		!isset($_POST['zip']) ||
 
-		{
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
-    }
- 
-     
- 
-    $firstname = $_POST['firstname']; // required
-    $lastname = $_POST['lastname']; // required
-    $emailfrom = $_POST['emailfrom']; // required
-    $phone = $_POST['phone']; // not required
-    $address1 = $_POST['address1']; // required
-	$address2 = $_POST['address2']; // required
-	$city = $_POST['city']; // required
-	$state = $_POST['state']; // required
-	$zip = $_POST['zip']; // required
+echo "<p class='colorRed'>Thank you for signing up to volunteer with Pets To Go! </p>";
 
+//It will create a table and display one set of name value pairs per row
+	echo "<table border='1'>";
+	echo "<tr><th>Field Name</th><th>Value of field</th></tr>";
+	foreach($_POST as $key => $value)
+	{
+		echo '<tr class=colorRow>';
+		echo '<td>',$key,'</td>';
+		echo '<td>',$value,'</td>';
+		echo "</tr>";
+	} 
+	echo "</table>";
+	echo "<p>&nbsp;</p>";
 
- 
-    $error_message = "";
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
- 
-  if(!preg_match($email_exp,$emailfrom)) {
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
-  }
- 
-    $string_exp = "/^[A-Za-z .'-]+$/";
- 
-  if(!preg_match($string_exp,$firstname)) {
-    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
-  }
- 
-  if(!preg_match($string_exp,$lastname)) {
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-  }
- 
-  if(strlen($address1) < 2) {
-    $error_message .= 'The address you entered does not appear to be valid.<br />';
-  }
-  if(strlen($address2) < 2) {
-    $error_message .= 'The address you entered does not appear to be valid.<br />';
-  }
-  if(strlen($city) < 2) {
-    $error_message .= 'The city you entered does not appear to be valid.<br />';
-  }
-  if(strlen($state) > 2) {
-    $error_message .= 'The state you entered does not appear to be valid.<br />';
-  }
-   if(strlen($zip) > 5) {
-    $error_message .= 'The Zip Code you entered does not appear to be valid.<br />';
-  }
- 
-  if(strlen($error_message) > 0) {
-    died($error_message);
-  }
- 
-    $email_message = "Form details below.\n\n";
- 
-     
-    function clean_string($string) {
-      $bad = array("content-type","bcc:","to:","cc:","href");
-      return str_replace($bad,"",$string);
-    }
- 
-     
- 
-    $email_message .= "First Name: ".clean_string($firstname)."\n";
-    $email_message .= "Last Name: ".clean_string($lastname)."\n";
-    $email_message .= "Email: ".clean_string($emailfrom)."\n";
-    $email_message .= "phone: ".clean_string($phone)."\n";
-    $email_message .= "address1: ".clean_string($address1)."\n";
-	$email_message .= "address2: ".clean_string($address2)."\n";
-	$email_message .= "city: ".clean_string($city)."\n";
-    $email_message .= "state: ".clean_string($state)."\n";
-    $email_message .= "zip: ".clean_string($zip)."\n";
+//This code pulls the field name and value attributes from the Post file
+//The Post file was created by the form page when it gathered all the name value pairs from the form.
+//It is building a string of data that will become the body of the email
 
- 
-// create email headers
-$headers = 'From: '.$emailfrom."\r\n".
-'Reply-To: '.$emailfrom."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-mail($email_to, $email_subject, $email_message, $headers, '-fjeannetta.fuller@hotmail.com');  
-?>
- 
-<!-- include your own success html here -->
- 
-<h1>Thank you for contacting us. We will be in touch with you very soon.</h1>
- 
-<?php
- 
-}
+//          CHANGE THE FOLLOWING INFORMATION TO SEND EMAIL FOR YOU //  
+
+	$toEmail = "jeannetta@jeannettaluetta.com";		//CHANGE within the quotes. Place email address where you wish to send the form data. 
+										//Use your DMACC email address for testing. 
+										//Example: $toEmail = "jhgullion@dmacc.edu";		
+	
+	$subject = "PTG Volunteer!";	//CHANGE within the quotes. Place your own message.  For the assignment use "WDV101 Email Example" 
+
+	$fromEmail = "jeannetta@jeannettaluetta.com";		//CHANGE within the quotes.  Use your DMACC email address for testing OR
+										//use your domain email address if you have Heartland-Webhosting as your provider.
+										//Example:  $fromEmail = "contact@jhgullion.org";  
+
+//   DO NOT CHANGE THE FOLLOWING LINES  //
+
+	$emailBody = "Form Data\n\n ";			//stores the content of the email
+	foreach($_POST as $key => $value)		//Reads through all the name-value pairs. 	$key: field name   $value: value from the form									
+	{
+		$emailBody.= $key."=".$value."\n";	//Adds the name value pairs to the body of the email, each one on their own line
+	} 
+	
+	$headers = "From: $fromEmail" . "\r\n";				//Creates the From header with the appropriate address
+
+ 	if (mail($toEmail,$subject,$emailBody,$headers)) 	//puts pieces together and sends the email to your hosting account's smtp (email) server
+	{
+   		echo("<p>Message successfully sent!</p>");
+  	} 
+	else 
+	{
+   		echo("<p>Message delivery failed...</p>");
+  	}
+
 ?>
